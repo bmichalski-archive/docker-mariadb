@@ -5,7 +5,7 @@ MARIADB_DATA_EXISTS=`docker inspect --format="{{ .Id }}" mariadb-data 2> /dev/nu
 
 if [ -z "$MARIADB_DATA_EXISTS" ]
 then
-  docker run -d -v /var/lib/mysql --name mariadb-data debian
+  docker run -d -v /var/lib/mysql --name mariadb-data ubuntu:14.04
 fi
 
 if ! [ -z "$MARIADB_EXISTS" ]
