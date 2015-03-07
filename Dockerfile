@@ -3,7 +3,7 @@ FROM bmichalski/base
 EXPOSE 3306:3306
 
 RUN \
-  bash base/configure-proxy.sh && \
+  base/configure-proxy.sh && \
   apt-get install -y \
     mariadb-server
 
