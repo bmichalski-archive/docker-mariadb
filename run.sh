@@ -4,4 +4,8 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
 $DIR/common-run.sh
 
-docker run -p 3306:3306 --volumes-from mariadb-data --name mariadb -d bmichalski/mariadb
+docker run \
+-p 3306:3306 \
+--volumes-from mariadb-data \
+--name mariadb \
+-d bmichalski/mariadb
