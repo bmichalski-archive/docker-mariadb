@@ -2,6 +2,8 @@ FROM ubuntu:14.04
 
 MAINTAINER Benjamin Michalski <benjamin.michalski@gmail.com>
 
+WORKDIR /root
+
 RUN \
   apt-get update && \
   apt-get install -y \
@@ -14,8 +16,6 @@ RUN chmod u+x /root/configure.sh
 RUN chmod u+x /root/on-startup.sh
 
 EXPOSE 3306
-
-WORKDIR /root
 
 CMD \
   /root/on-startup.sh
