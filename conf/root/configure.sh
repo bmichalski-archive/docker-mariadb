@@ -23,4 +23,3 @@ mysql -u root -e "FLUSH PRIVILEGES;"
 
 chown -R mysql:mysql /var/lib/mysql
 chmod 700 /var/lib/mysql
-

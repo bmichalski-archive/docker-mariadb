@@ -1,7 +1,5 @@
 FROM ubuntu:14.04
 
-MAINTAINER Benjamin Michalski <benjamin.michalski@gmail.com>
-
 WORKDIR /root
 
 RUN \
@@ -17,5 +15,4 @@ RUN chmod u+x /root/on-startup.sh
 
 EXPOSE 3306
 
-CMD \
-  /root/on-startup.sh
+CMD /root/on-startup.sh
